@@ -1,4 +1,12 @@
-﻿System.Console.Write("\t HEY WELCOME \nPlease input your name: ");
+﻿string password = "";
+do
+{
+    System.Console.Write("Dasturdan foydalanish uchun parol kiriting: ");
+    password = System.Console.ReadLine();
+}while(password != "Abdulaziz20");
+
+
+System.Console.Write("\t HEY WELCOME \nPlease input your name: ");
 string yourName = System.Console.ReadLine();
 System.Console.Write("Please input your age: ");
 short yourAge = System.Convert.ToInt16(System.Console.ReadLine());
