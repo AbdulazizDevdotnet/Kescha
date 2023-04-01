@@ -15,3 +15,5 @@ else
 {
     System.Console.WriteLine($"{yourName} siz Keschadan {yourAge - keschasAge} yoshga katta ekansiz");
 }
+
+System.Console.WriteLine(yourAge >= keschasAge ?yourAge > keschasAge ?"Siz Keschadan kattasiz":"Sizning kescha bilan yoshingiz teng" : "Siz Keschadan kichkinasiz ");
