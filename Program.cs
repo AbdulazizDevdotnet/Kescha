@@ -25,3 +25,18 @@ else
 }
 
 System.Console.WriteLine(yourAge >= keschasAge ?yourAge > keschasAge ?"Siz Keschadan kattasiz":"Sizning kescha bilan yoshingiz teng" : "Siz Keschadan kichkinasiz ");
+System.Console.WriteLine("Let me tell you about my friends.");
+string[] friendsName = { "Qarg'a", "Chumchuq", "Layle" ,"To'viq"};
+short[] friendsAge = { 2, 3, 4, 5};
+string[] address = { "Istalba", "Sim", "baland istalbani uchi", "Katak"};
+short sanoq = 0;
+while(sanoq < 4)
+{
+    System.Console.WriteLine($"{friendsName[sanoq]} is {friendsAge[sanoq]} years old and he is from {address[sanoq]}");
+    sanoq++;
+}
+
+foreach(string friendName in friendsName)
+{
+    System.Console.WriteLine(friendName);
+}
