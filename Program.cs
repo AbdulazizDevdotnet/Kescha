@@ -1,42 +1,15 @@
-﻿string password = "";
-do
-{
-    System.Console.Write("Dasturdan foydalanish uchun parol kiriting: ");
-    password = System.Console.ReadLine();
-}while(password != "Abdulaziz20");
+﻿using KESCHA.Classes;
+Animal kescha = new Animal(name: "Kescha", age: 5);
+kescha.Security();
 
-
-System.Console.Write("\t HEY WELCOME \nPlease input your name: ");
-string yourName = System.Console.ReadLine();
-System.Console.Write("Please input your age: ");
-short yourAge = System.Convert.ToInt16(System.Console.ReadLine());
-short keschasAge = 7;
-if(keschasAge > yourAge)
-{
-    System.Console.WriteLine($"{yourName} siz Keschadan {keschasAge - yourAge} yoshga kichik ekansiz");
-}
-else if(keschasAge == yourAge)
-{
-    System.Console.WriteLine($"{yourName} siz Kescha bilan teng ekansiz");
-}
-else
-{
-    System.Console.WriteLine($"{yourName} siz Keschadan {yourAge - keschasAge} yoshga katta ekansiz");
-}
-
-System.Console.WriteLine(yourAge >= keschasAge ?yourAge > keschasAge ?"Siz Keschadan kattasiz":"Sizning kescha bilan yoshingiz teng" : "Siz Keschadan kichkinasiz ");
-System.Console.WriteLine("Let me tell you about my friends.");
-string[] friendsName = { "Qarg'a", "Chumchuq", "Layle" ,"To'viq"};
-short[] friendsAge = { 2, 3, 4, 5};
-string[] address = { "Istalba", "Sim", "baland istalbani uchi", "Katak"};
-short sanoq = 0;
-while(sanoq < 4)
-{
-    System.Console.WriteLine($"{friendsName[sanoq]} is {friendsAge[sanoq]} years old and he is from {address[sanoq]}");
-    sanoq++;
-}
-
-foreach(string friendName in friendsName)
-{
-    System.Console.WriteLine(friendName);
-}
+Console.Write("\t HEY WELCOME \nPlease input your name: ");
+string userName = Console.ReadLine();
+Console.Write("Please input your age: ");
+short userAge = Convert.ToInt16(Console.ReadLine());
+kescha.CalculateAgeDifferenceNoReturn(userAge);
+// Console.WriteLine(kescha.Name);
+// Console.WriteLine(kescha.Age);
+kescha.PrintAgeDifference();
+kescha.CompareAges(userAge,userName);
+kescha.TellAboutFriends(userName,userAge);
+// System.Console.WriteLine(yourAge >= kescha.Age ?yourAge > kescha.Age ?"Siz Keschadan kattasiz":"Sizning kescha bilan yoshingiz teng" : "Siz Keschadan kichkinasiz ");
