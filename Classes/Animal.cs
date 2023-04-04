@@ -1,6 +1,6 @@
 namespace KESCHA.Classes
 {
-    class Animal
+    public abstract class Animal
     {
         private int age;
         private string password = "Abdulaziz20";
@@ -29,6 +29,11 @@ namespace KESCHA.Classes
             // AgeDifference = CalculateAgeDifference(userAge , animalAge);
             // CalculateAgeDifferenceNoReturn(userAge, animalAge);
         }
+        public virtual void Greeting(string userName)
+        {
+            Console.WriteLine($"Hello {userName} how are you");
+        }
+        public abstract void Greeting2(string userName);
         public void PrintAgeDifference()
         {
             Console.WriteLine($"The difference betwen your and {Name}'s age is {AgeDifference}");

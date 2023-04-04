@@ -6,13 +6,18 @@ namespace KESCHA
     {
         static void Main()
         {
-            Animal kescha = new Animal(name: "Kescha", age: 5);
+            Animal kescha = new Bird(name: "Kescha", age: 5);
+            Animal kasee = new Pet(name: "Kasee", age: 7);
             kescha.Security();
 
             Console.Write("\t HEY WELCOME \nPlease input your name: ");
             string userName = Console.ReadLine();
             Console.Write("Please input your age: ");
             short userAge = Convert.ToInt16(Console.ReadLine());
+            kasee.Greeting2(userName);
+            kescha.Greeting2(userName);
+            kasee.Greeting(userName);
+            kescha.Greeting(userName);
             kescha.CalculateAgeDifferenceNoReturn(userAge);
             // Console.WriteLine(kescha.Name);
             // Console.WriteLine(kescha.Age);
