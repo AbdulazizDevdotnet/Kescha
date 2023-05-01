@@ -2,7 +2,7 @@ using System;
 
 namespace KESCHA.Classes
 {
-    public class Bird : Animal
+    public class Bird : Animal,IAnimal,IBird
     {
         public Bird(string name, int age)
             : base(name,age)

@@ -1,4 +1,5 @@
 ﻿using KESCHA.Classes;
+using KESCHA.Enums;
 
 namespace KESCHA
 {
@@ -9,9 +10,12 @@ namespace KESCHA
             try
             {
                 Animal kescha = new Bird(name: "Kescha", age: 5);
-                Animal kasee = new Pet(name: "Kasee", age: 7);
+                Pet kasee = new Pet(name: "Kasee", age: 7);
+                kasee.Type = PetType.Cat;
+                Console.WriteLine("Kescha was created: "+kescha.CreatedDate);
+                Console.WriteLine("Kasee was created: "+kasee.CreatedDate);
                 kescha.Security();
-
+                System.Console.WriteLine(kasee.Type);
                 Console.Write("\t HEY WELCOME \nPlease input your name: ");
                 string userName = Console.ReadLine();
                 Console.Write("Please input your age: ");

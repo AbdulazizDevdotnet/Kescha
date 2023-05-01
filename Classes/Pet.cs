@@ -1,9 +1,11 @@
 using System;
+using KESCHA.Enums;
 
 namespace KESCHA.Classes
 {
-    public class Pet : Animal
+    public class Pet : Animal,IAnimal,IPet
     {
+        public PetType Type { get; set; }
         public Pet(string name, int age)
             :base(name, age)
         {

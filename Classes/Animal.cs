@@ -1,23 +1,26 @@
 namespace KESCHA.Classes
 {
-    public abstract class Animal
+    public abstract class Animal: IAnimal
     {
         private int age;
         private string password = "Abdulaziz20";
         public string Name { get; set; }
         public int Age {get; set; }
         public int AgeDifference { get; set; }
+        public DateTimeOffset CreatedDate { get; set; }
 
         public Animal()
         {
             Name = "No name";
             Age = 0;
             AgeDifference = 0;
+            CreatedDate = DateTimeOffset.UtcNow;
         }
         public Animal(string name,int age)
         {
             Age = age;
             Name = name;
+            CreatedDate = DateTimeOffset.UtcNow;
         }
         public Animal(
             string name,
@@ -26,6 +29,7 @@ namespace KESCHA.Classes
         {
             Name = name;
             Age = animalAge;
+            CreatedDate = DateTimeOffset.UtcNow;
             // AgeDifference = CalculateAgeDifference(userAge , animalAge);
             // CalculateAgeDifferenceNoReturn(userAge, animalAge);
         }
